@@ -1,0 +1,47 @@
+body.light {
+    --search-box: #ceced0;
+    --i: #4f4f5b;
+    --word-result: #dbdbde;
+    --search-word: #c3c5c9;
+}
+
+body.dark {
+    --search-box: #40474d;
+    --i: #b7b7b8;
+    --word-result: #2b2e36;
+    --search-word: #3b4049;
+}
+
+.headline{
+    color: #adaeb1;
+    margin: 20px;
+}
+
+.words-container{
+    margin: 17px;
+    background-color: var(--word-result);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.words{
+    background-color: var(--search-word);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.words i{
+    color: var(--i);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.no-favorite{
+    margin-left: 50px;
+}

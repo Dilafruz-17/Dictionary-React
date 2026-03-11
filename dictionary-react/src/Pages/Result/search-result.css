@@ -1,0 +1,59 @@
+body.light {
+    --search-box: #ceced0;
+    --i: #4f4f5b;
+    --word-result: #dbdbde;
+    --search-word: #c3c5c9;
+}
+
+body.dark {
+    --search-box: #40474d;
+    --i: #b7b7b8;
+    --word-result: #2b2e36;
+    --search-word: #3b4049;
+}
+
+.search-word-result{
+    background-color: var(--search-word);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.narrow{
+    margin: 30px 20px;
+}
+
+.narrow a{
+    background-color: #35353c;
+    border-radius: 50%;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--i);
+    text-align: center;
+}
+
+
+.eng-word{
+    color: var(--i);
+}
+
+p{
+    color: var(--i);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ 
+
+span{
+    color: var(--i);
+   font-weight: bold;
+    font-size: 20px;
+}
+ 
+
+ 
