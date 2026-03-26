@@ -1,6 +1,7 @@
 import "./favorites.css"
-
+import { useNavigate } from "react-router-dom"
 function Favorites({ favorites, setFavorites }) {
+const navigate = useNavigate()
 
   const toggleFavorite = (obj) => {
     if (favorites.some(fav => fav.eng === obj.eng)) {
@@ -19,8 +20,8 @@ function Favorites({ favorites, setFavorites }) {
         <p className="no-favorite">No favorites yet</p>
       ) : (
         favorites.map((obj, index) => (
-          <div key={index} className="words-container">
-            <div className="words">
+          <div key={index} className="words-container"  onClick={() => navigate("/searchresult", { state: obj })}>
+            <div className="words" >
               <div className="word">
                 <h3>{obj.eng}</h3>
                 <p>{obj.uzb}</p>

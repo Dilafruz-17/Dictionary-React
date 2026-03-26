@@ -1,6 +1,6 @@
 import "./setting.css"
 
-function Setting({ theme, setTheme }){
+function Setting({ theme, setTheme,  fontSize, setFontSize }){
     return(
         <div>
             <h1 className="header">Setting</h1>
@@ -21,7 +21,7 @@ function Setting({ theme, setTheme }){
                 </div>
                 <div className="setting-function">
                     <h3>Font size</h3>
-                    <select>
+                    <select value={fontSize} onChange={(e) => setFontSize(e.target.value)}>
                         <option value="small">Small</option>
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>

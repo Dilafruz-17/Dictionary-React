@@ -10,6 +10,7 @@ import Search from "./Pages/Search/search.jsx"
 function App() {
   const [favorites, setFavorites] = useState([])
   const [theme, setTheme] = useState("dark")
+   const [fontSize, setFontSize] = useState("medium") // font-size state
 
   useEffect(() => {
     document.body.classList.remove("light", "dark")
@@ -20,12 +21,21 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Search favorites={favorites} setFavorites={setFavorites} />} />
-        <Route path="/setting" element={<Setting theme={theme} setTheme={setTheme} />} />
+        <Route path="/setting" element={<Setting theme={theme} setTheme={setTheme}  fontSize={fontSize} setFontSize={setFontSize}/>} />
         <Route path="/favorites" element={<Favorites favorites={favorites} setFavorites={setFavorites} />} />
-        <Route path="/searchresult" element={<SearchResult />} />
+        <Route path="/searchresult" element={<SearchResult favorites={favorites} setFavorites={setFavorites} />} />
       </Routes>
       <Nav />
+      <style>
+        {`
+          body {
+            font-size: ${fontSize === "small" ? "14px" : fontSize === "medium" ? "18px" : "22px"};
+          }
+        `}
+      </style>
     </Router>
+
+    
   )
 }
 

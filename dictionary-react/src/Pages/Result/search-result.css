@@ -47,7 +47,10 @@ p{
     gap: 20px;
 }
 
- 
+i {
+    font-size: 20px;
+    color: var(--nav-item);
+}
 
 span{
     color: var(--i);
